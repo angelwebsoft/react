@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Container, Nav, Navbar, Button, Offcanvas} from 'react-bootstrap';
+import {Nav, Navbar, Button} from 'react-bootstrap';
 
 
 
@@ -55,25 +55,6 @@ function Header() {
           <Nav as={'ul'} className="m-auto">
             {navLinks}
           </Nav>
-          <Button
-            className={`menu hamburger hamburger--spin ${show ? 'is-active' : ''}`}
-            variant="primary"
-            onClick={handleShow}
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </Button>
-
-          <Offcanvas show={show} onHide={handleClose} placement={'end'}>
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              {/* Dynamic content for the Offcanvas.Body */}
-              Some text as placeholder. In real life, you can have the elements you have chosen. Like text, images, lists, etc.
-            </Offcanvas.Body>
-          </Offcanvas>
         </Container>
       </Navbar>
     </>
